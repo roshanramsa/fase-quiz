@@ -55,5 +55,5 @@ export async function generateCertificate({ name, college, score, total, level, 
   const nameY = H * 0.55; 
   doc.text(name.toUpperCase(), W / 2, nameY, { align: "center" });
 
-  doc.save(`TamilNaduPolice_CyberAwareness_${name.replace(/\s+/g, "_")}.pdf`);
+  doc.save(`TNPL_CyberAwareness_${name.replace(/\s+/g, "_")}_${college.replace(/\s+/g, "_")}.pdf`);
 }

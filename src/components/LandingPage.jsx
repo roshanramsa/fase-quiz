@@ -7,6 +7,22 @@ export default function LandingPage({ onStart }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name.trim() && college.trim()) {
+      
+      // Fire and forget tracking to Google Sheets
+      const scriptUrl = import.meta.env.VITE_GOOGLE_SHEET_URL;
+      if (scriptUrl) {
+        const formData = new FormData();
+        formData.append('Name', name.trim());
+        formData.append('College', college.trim());
+        formData.append('Timestamp', new Date().toLocaleString());
+        
+        fetch(scriptUrl, {
+          method: 'POST',
+          body: formData,
+          mode: 'no-cors'
+        }).catch(err => console.error("Sheet tracking failed", err));
+      }
+
       onStart({ name, college });
     }
   };
@@ -60,12 +76,12 @@ export default function LandingPage({ onStart }) {
               disabled={!name.trim() || !college.trim()}
               className="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 px-6 rounded-lg shadow-md transition-all disabled:opacity-50 disabled:cursor-not-allowed mt-4 uppercase tracking-wider"
             >
-              Start Official Quiz
+              Start Quiz
             </button>
           </form>
           
           <div className="mt-8 text-center text-sm text-slate-500 border-t border-slate-100 pt-6">
-            <p>15 Questions - 30 Seconds per Question - Official Certificate on Completion</p>
+            <p>10 Questions - 30 Seconds per Question - Certificate on Completion</p>
           </div>
         </div>
       </div>

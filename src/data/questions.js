@@ -1,4 +1,4 @@
-// 15 Cybercrime Awareness questions (TNPL / TN Police Initiative)
+// 10 Cybercrime Awareness questions (TNPL / TN Police Initiative)
 export const QUESTIONS = [
   {
     id: 1,
@@ -100,20 +100,6 @@ export const QUESTIONS = [
   },
   {
     id: 8,
-    category: "Social Engineering",
-    difficulty: "Easy",
-    question: "You receive a WhatsApp message from a close friend's number asking for urgent money for a medical emergency. What is the safest first step?",
-    options: [
-      "Transfer the money immediately to help them",
-      "Call the friend on a regular phone call to verify if it's really them",
-      "Forward the message to other friends",
-      "Ask the sender to send a selfie"
-    ],
-    correct: 1,
-    explanation: "Accounts can be hacked or spoofed. Always verify urgent requests for money by calling the person directly, preferably through a regular cellular call."
-  },
-  {
-    id: 9,
     category: "Phishing",
     difficulty: "Easy",
     question: "You get an SMS saying 'Your PAN card will be blocked today. Click here to update KYC: http://pan-update-kyc.xyz'. What should you do?",
@@ -127,7 +113,7 @@ export const QUESTIONS = [
     explanation: "Banks and government authorities do not send SMS warnings with unofficial links (like .xyz or random URLs) asking for immediate KYC updates."
   },
   {
-    id: 10,
+    id: 9,
     category: "Search Engine Fraud",
     difficulty: "Hard",
     question: "You ordered food on an app and it wasn't delivered. You Google the customer care number, find a mobile number, and call it. The person sends a link to process your refund. Is this safe?",
@@ -141,63 +127,7 @@ export const QUESTIONS = [
     explanation: "Scammers frequently manipulate Google search results or Google Maps listings. Always use the official app or official website to find customer support numbers."
   },
   {
-    id: 11,
-    category: "Identity Theft",
-    difficulty: "Medium",
-    question: "Someone creates a fake Facebook/Instagram profile using the photos and name of a police officer or a known person, then messages people asking for money. This crime is known as:",
-    options: [
-      "Profile Impersonation Fraud",
-      "Phishing",
-      "Ransomware",
-      "DDoS Attack"
-    ],
-    correct: 0,
-    explanation: "Profile impersonation involves creating a duplicate account using stolen photos to deceive the victim's friends into sending money."
-  },
-  {
-    id: 12,
-    category: "Social Media Security",
-    difficulty: "Easy",
-    question: "You accept a video call from an unknown number on WhatsApp. The screen shows an explicit video, and it secretly records your face. Later, they demand money to not leak the video. This is called:",
-    options: [
-      "Sextortion",
-      "Catfishing",
-      "Video Phishing",
-      "Deepfake"
-    ],
-    correct: 0,
-    explanation: "This is a Sextortion scam. Never accept video calls from unknown numbers, especially late at night. If victimized, do not pay the money and report it immediately."
-  },
-  {
-    id: 13,
-    category: "Advanced Threats",
-    difficulty: "Hard",
-    question: "You receive a video call from your 'boss' instructing you to transfer company funds to a new vendor. The voice and face look exactly like your boss, but it's actually an AI simulation. This technology is called:",
-    options: [
-      "Deepfake",
-      "Metaverse",
-      "Screen Mirroring",
-      "Cryptojacking"
-    ],
-    correct: 0,
-    explanation: "Deepfakes use AI to create highly realistic fake videos or audio. Always verify unusual financial requests through a secondary channel, like calling the person."
-  },
-  {
-    id: 14,
-    category: "Network Security",
-    difficulty: "Medium",
-    question: "Why is it dangerous to use free, open public Wi-Fi (like at a cafe or railway station) for banking transactions?",
-    options: [
-      "It consumes too much mobile data",
-      "Hackers on the same network can intercept your data (Man-in-the-Middle attack)",
-      "The bank's server will block open Wi-Fi connections",
-      "Your phone's battery drains faster"
-    ],
-    correct: 1,
-    explanation: "Open Wi-Fi networks are often unencrypted. Attackers can intercept your connection and steal sensitive data like passwords and session cookies."
-  },
-  {
-    id: 15,
+    id: 10,
     category: "Helplines",
     difficulty: "Medium",
     question: "Apart from calling 1930, what is the official Government of India website to report cybercrimes?",
